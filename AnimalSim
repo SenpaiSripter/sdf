@@ -1,0 +1,146 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local frame = Instance.new("Frame")
+local OFF = Instance.new("TextButton")
+local ON = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local Minimize = Instance.new("TextButton")
+local TextButton = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local openframe = Instance.new("Frame")
+local TextButton_2 = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
+
+frame.Name = "frame"
+frame.Parent = ScreenGui
+frame.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+frame.Position = UDim2.new(0.343829751, 0, 0.177181348, 0)
+frame.Size = UDim2.new(0, 246, 0, 340)
+frame.Active = true
+frame.Draggable = true
+
+OFF.Name = "OFF"
+OFF.Parent = frame
+OFF.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OFF.BackgroundTransparency = 1.000
+OFF.Position = UDim2.new(0.0643630177, 0, 0.536313415, 0)
+OFF.Size = UDim2.new(0, 213, 0, 64)
+OFF.Font = Enum.Font.SourceSans
+OFF.Text = "AutoFarm-OFF"
+OFF.TextColor3 = Color3.fromRGB(255, 0, 0)
+OFF.TextScaled = true
+OFF.TextSize = 14.000
+OFF.TextWrapped = true
+OFF.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/SenpaiSripter/Fails/main/AnimalSimulatorFail" , true))()
+end)
+
+ON.Name = "ON"
+ON.Parent = frame
+ON.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ON.BackgroundTransparency = 1.000
+ON.Position = UDim2.new(0.0570495278, 0, 0.258408904, 0)
+ON.Size = UDim2.new(0, 213, 0, 64)
+ON.Font = Enum.Font.SourceSans
+ON.Text = "AutoFarm-ON"
+ON.TextColor3 = Color3.fromRGB(85, 255, 0)
+ON.TextScaled = true
+ON.TextSize = 14.000
+ON.TextWrapped = true
+ON.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/SenpaiSripter/AnimalSimulator1/main/AnimalSimulatorScript" , true))()
+end)
+
+TextLabel.Parent = frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.0602189079, 0, -0.00085735973, 0)
+TextLabel.Size = UDim2.new(0, 169, 0, 53)
+TextLabel.Font = Enum.Font.SourceSansSemibold
+TextLabel.Text = "DevSenpai"
+TextLabel.TextColor3 = Color3.fromRGB(182, 182, 182)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+Minimize.Name = "Minimize"
+Minimize.Parent = frame
+Minimize.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.BackgroundTransparency = 1.000
+Minimize.Position = UDim2.new(0.743278086, 0, 0.0050773602, 0)
+Minimize.Size = UDim2.new(0, 56, 0, 50)
+Minimize.Font = Enum.Font.SourceSans
+Minimize.Text = "X"
+Minimize.TextColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.TextScaled = true
+Minimize.TextSize = 14.000
+Minimize.TextWrapped = true
+
+TextButton.Parent = frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextButton.Position = UDim2.new(0.0643630624, 0, 0.835294127, 0)
+TextButton.Size = UDim2.new(0, 213, 0, 33)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "DevSenpai#1484"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+UICorner.CornerRadius = UDim.new(0, 30)
+UICorner.Parent = frame
+
+openframe.Name = "openframe"
+openframe.Parent = ScreenGui
+openframe.Active = true
+openframe.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+openframe.BackgroundTransparency = 3.000
+openframe.Position = UDim2.new(0, 0, 0.555888772, 0)
+openframe.Size = UDim2.new(0, 108, 0, 57)
+openframe.Visible = false
+
+TextButton_2.Parent = openframe
+TextButton_2.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+TextButton_2.Size = UDim2.new(0, 95, 0, 57)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "OPEN"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14.000
+TextButton_2.TextWrapped = true
+
+UICorner_2.CornerRadius = UDim.new(0, 15)
+UICorner_2.Parent = TextButton_2
+
+-- Scripts:
+
+local function RGEBL_fake_script() -- Minimize.LocalScript 
+	local script = Instance.new('LocalScript', Minimize)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.openframe.Visible = true
+	end)
+end
+coroutine.wrap(RGEBL_fake_script)()
+local function NTMETQ_fake_script() -- TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_2)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.frame.Visible = true
+	end)
+end
+coroutine.wrap(NTMETQ_fake_script)()
